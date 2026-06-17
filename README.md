@@ -42,11 +42,19 @@ Conversations are saved automatically when any of the 6 triggers occur:
 5. Unusual silence (30+ minutes)
 6. Crash/freeze
 
+## Development Workflow
+
+After making changes to ChatLog, run `DEVELOPMENT.bat` to:
+1. Create Git commits
+2. Push changes to GitHub
+3. Update the ChatLog installation on your system
+
 ## Scripts
 
 - `INSTALL.bat` - Automated installation script
 - `VERIFY.bat` - Verification script to check installation
 - `UNINSTALL.bat` - Uninstallation script
+- `DEVELOPMENT.bat` - Development workflow script
 
 ## File Structure
 
@@ -59,6 +67,16 @@ Conversations are saved automatically when any of the 6 triggers occur:
         │   └── ChatLog-Convention.md
         └── from-{start}-to-{end}-{topic}.md
 ```
+
+## Git Repository
+
+This project is maintained in a Git repository. To contribute or track changes:
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run `DEVELOPMENT.bat` to commit and push your changes
+5. Create a pull request
 
 ## Version
 
