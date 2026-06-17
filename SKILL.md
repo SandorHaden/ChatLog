@@ -1,6 +1,16 @@
 ---
 name: "chatlog"
 description: "ChatLog — every conversation, forever logged. Splash art MINDIG megjelenik session-elején (új + folytatás). 6-trigger handler, from-to-topic format. Skill location: %USERPROFILE%\.agents\skills\chatlog\"
+version: "1.0.0"
+author: "Sandor Haden"
+license: "MIT (free) / Commercial (paid)"
+required_files:
+  - "docs/ChatLog-Convention.md"
+  - "assets/ChatLog-Splash.txt"
+optional_files:
+  - "docs/SECURITY-MODEL.md"
+installation_notes: "This skill requires additional files. Use INSTALL.bat for automatic setup or manually copy all files from the distribution package to %USERPROFILE%\\.agents\\skills\\chatlog\\"
+compatibility: "Qwen Code v1.0+"
 ---
 
 # ChatLog — Every Conversation, Forever Logged

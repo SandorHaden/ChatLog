@@ -1,6 +1,8 @@
 # ChatLog - Conversation Management System
 
-ChatLog is a conversation management system for Qwen Code that automatically saves and organizes your AI-assisted coding sessions. Every conversation is logged to `{project}/docs/conversations/` in a deterministic, human-readable, searchable format.
+ChatLog is a multi-file conversation management system for Qwen Code that automatically saves and organizes your AI-assisted coding sessions. Every conversation is logged to `{project}/docs/conversations/` in a deterministic, human-readable, searchable format.
+
+**Note:** This skill consists of multiple files that must all be installed together for proper functionality.
 
 ## Features
 
@@ -18,14 +20,22 @@ ChatLog is a conversation management system for Qwen Code that automatically sav
 2. Run `INSTALL.bat` as administrator
 3. Follow the prompts to complete installation
 
+This script will install all required files:
+- `SKILL.md` - Main skill definition
+- `docs/ChatLog-Convention.md` - Conversation rules and documentation
+- `assets/ChatLog-Splash.txt` - Splash art displayed at session start
+
 ### Manual Installation
 
 1. Clone this repository or download the latest release
-2. Place the `chatlog` folder in your Qwen Code skills directory:
+2. Copy the entire `chatlog` folder to your Qwen Code skills directory:
    `%USERPROFILE%\.agents\skills\chatlog\`
-3. For each project where you want to use ChatLog:
+3. Ensure all files are present in their correct subdirectories
+4. For each project where you want to use ChatLog:
    - Create a `docs/conversations/` directory in your project root
    - Add the ChatLog configuration to your project's `MEMORY.md` file
+
+**Important:** This skill requires multiple files to function properly. Installing only the `SKILL.md` file will result in incomplete functionality.
 
 ## Usage
 

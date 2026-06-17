@@ -24,6 +24,8 @@ ChatLog/
 └── ... (additional documentation files)
 ```
 
+**Important:** This is a multi-file skill. All files must be installed together for proper functionality. The `SKILL.md` file alone is not sufficient.
+
 ## Features
 
 ### Automatic Conversation Logging
