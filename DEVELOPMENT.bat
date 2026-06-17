@@ -48,7 +48,7 @@ echo.
 echo Updating ChatLog on system...
 REM Define source and destination directories
 set "SOURCE_DIR=%~dp0"
-set "DEST_DIR=C:\Users\Háden Sándor\.agents\skills\chatlog"
+set "DEST_DIR=%USERPROFILE%\.agents\skills\chatlog"
 
 REM Copy files
 echo Copying SKILL.md...
@@ -83,7 +83,7 @@ echo.
 echo Updating ChatLog on system...
 REM Define source and destination directories
 set "SOURCE_DIR=%~dp0"
-set "DEST_DIR=C:\Users\Háden Sándor\.agents\skills\chatlog"
+set "DEST_DIR=%USERPROFILE%\.agents\skills\chatlog"
 
 REM Copy files
 echo Copying SKILL.md...

@@ -18,7 +18,7 @@ echo This script will uninstall ChatLog from your Qwen Code skills directory.
 echo.
 
 REM Define ChatLog directory
-set "CHATLOG_DIR=C:\Users\Háden Sándor\.agents\skills\chatlog"
+set "CHATLOG_DIR=%USERPROFILE%\.agents\skills\chatlog"
 
 echo ChatLog directory: %CHATLOG_DIR%
 echo.

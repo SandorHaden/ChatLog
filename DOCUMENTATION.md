@@ -58,7 +58,7 @@ The system ensures that all conversations are preserved across session restarts,
 
 ### Prerequisites
 - Qwen Code installed and configured
-- User skills directory at `C:\Users\Háden Sándor\.agents\skills\`
+- User skills directory at `%USERPROFILE%\.agents\skills\`
 
 ### Installation Steps
 
@@ -68,7 +68,7 @@ The system ensures that all conversations are preserved across session restarts,
 
 2. **Install the Skill**
    - Copy the `chatlog` folder to your Qwen Code skills directory:
-     `C:\Users\Háden Sándor\.agents\skills\chatlog\`
+     `%USERPROFILE%\.agents\skills\chatlog\`
    - Ensure the following files are present:
      - `SKILL.md` - Main skill definition
      - `docs\ChatLog-Convention.md` - Conversation rules

@@ -22,7 +22,7 @@ ChatLog is a conversation management system for Qwen Code that automatically sav
 
 1. Clone this repository or download the latest release
 2. Place the `chatlog` folder in your Qwen Code skills directory:
-   `C:\Users\Háden Sándor\.agents\skills\chatlog\`
+   `%USERPROFILE%\.agents\skills\chatlog\`
 3. For each project where you want to use ChatLog:
    - Create a `docs/conversations/` directory in your project root
    - Add the ChatLog configuration to your project's `MEMORY.md` file

@@ -54,7 +54,7 @@ ChatLog/
 
 ### Manual Installation
 1. Copy the `chatlog` folder to your Qwen Code skills directory:
-   `C:\Users\Háden Sándor\.agents\skills\chatlog\`
+   `%USERPROFILE%\.agents\skills\chatlog\`
 2. For each project where you want to use ChatLog:
    - Create a `docs/conversations/` directory in your project root
    - Add the ChatLog configuration to your project's `MEMORY.md` file

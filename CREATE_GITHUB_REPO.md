@@ -12,7 +12,7 @@ To create a GitHub repository for ChatLog, follow these steps:
 Then run the following commands in your terminal:
 
 ```bash
-cd c:\Users\Háden Sándor\source\repos\ChatLog
+cd %CD%
 git remote add origin https://github.com/your-username/ChatLog.git
 git branch -M main
 git push -u origin main

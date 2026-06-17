@@ -4,7 +4,7 @@ echo ==========================
 echo.
 
 REM Define ChatLog directory
-set "CHATLOG_DIR=C:\Users\Háden Sándor\.agents\skills\chatlog"
+set "CHATLOG_DIR=%USERPROFILE%\.agents\skills\chatlog"
 
 echo Checking if ChatLog is properly installed...
 echo.

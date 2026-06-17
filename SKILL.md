@@ -1,6 +1,6 @@
 ---
 name: "chatlog"
-description: "ChatLog — every conversation, forever logged. Splash art MINDIG megjelenik session-elején (új + folytatás). 6-trigger handler, from-to-topic format. Skill location: C:\Users\Háden Sándor\.agents\skills\chatlog\"
+description: "ChatLog — every conversation, forever logged. Splash art MINDIG megjelenik session-elején (új + folytatás). 6-trigger handler, from-to-topic format. Skill location: %USERPROFILE%\.agents\skills\chatlog\"
 ---
 
 # ChatLog — Every Conversation, Forever Logged
@@ -113,7 +113,7 @@ On trigger: 5-10 line summary → `MEMORY.md` "Aktuális gondolatmenet" + sessio
         └── from-2026-06-12-...md
 ```
 
-**Note:** The canonical `ChatLog-Convention.md` and `ChatLog-Splash.txt` files are stored in the skill's own folder (`C:\Users\Háden Sándor\.agents\skills\chatlog\`), not in each project's `docs/conversations/meta/` folder. Projects only need to store their conversation files and a project-specific `index.md`.
+**Note:** The canonical `ChatLog-Convention.md` and `ChatLog-Splash.txt` files are stored in the skill's own folder (`%USERPROFILE%\.agents\skills\chatlog\`), not in each project's `docs/conversations/meta/` folder. Projects only need to store their conversation files and a project-specific `index.md`.
 
 ## Installation and usage
 
