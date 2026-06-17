@@ -27,6 +27,8 @@ try {
         # Compare versions
         if ([System.Version]$latestVersion -gt [System.Version]$currentVersion) {
             Write-Host "UPDATE_AVAILABLE:$latestVersion"
+            Write-Host "IMPORTANT: A backup of your current installation will be created before updating."
+            Write-Host "You can rollback to this version if needed by running rollback_chatlog.bat"
         } else {
             Write-Host "UP_TO_DATE"
         }

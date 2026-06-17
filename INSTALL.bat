@@ -69,6 +69,15 @@ copy "%SOURCE_DIR%assets\VERSION.txt" "%DEST_DIR%\assets" >nul
 echo Copying check_version.ps1...
 copy "%SOURCE_DIR%check_version.ps1" "%DEST_DIR%" >nul
 
+echo Copying backup_chatlog.bat...
+copy "%SOURCE_DIR%backup_chatlog.bat" "%DEST_DIR%" >nul
+
+echo Copying rollback_chatlog.bat...
+copy "%SOURCE_DIR%rollback_chatlog.bat" "%DEST_DIR%" >nul
+
+echo Copying external_rollback.bat...
+copy "%SOURCE_DIR%external_rollback.bat" "%DEST_DIR%" >nul
+
 echo.
 echo Installation complete!
 echo.

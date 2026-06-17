@@ -57,6 +57,27 @@ if exist "%CHATLOG_DIR%\check_version.ps1" (
     set /a ERRORS+=1
 )
 
+if exist "%CHATLOG_DIR%\backup_chatlog.bat" (
+    echo [OK] backup_chatlog.bat found
+) else (
+    echo [ERROR] backup_chatlog.bat not found
+    set /a ERRORS+=1
+)
+
+if exist "%CHATLOG_DIR%\rollback_chatlog.bat" (
+    echo [OK] rollback_chatlog.bat found
+) else (
+    echo [ERROR] rollback_chatlog.bat not found
+    set /a ERRORS+=1
+)
+
+if exist "%CHATLOG_DIR%\external_rollback.bat" (
+    echo [OK] external_rollback.bat found
+) else (
+    echo [ERROR] external_rollback.bat not found
+    set /a ERRORS+=1
+)
+
 echo.
 if %ERRORS% == 0 (
     echo Verification successful! ChatLog is properly installed.

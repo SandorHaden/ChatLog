@@ -43,6 +43,8 @@ ChatLog/
 - Index generation for easy navigation
 - File segmentation for large conversations
 - **Automatic update notifications** - Checks for new versions on startup
+- **Automatic backup before updates** - Safety net for all updates
+- **Rollback capability** - Recover from problematic updates
 
 ### Integration
 - Works with both OpenClaw and VS Code/Qwen Code interfaces

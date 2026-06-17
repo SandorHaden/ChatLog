@@ -32,6 +32,8 @@ The system ensures that all conversations are preserved across session restarts,
 - Standardized file naming convention with timestamps
 - Easy retrieval and search of past conversations
 - **Automatic version checking and updates** - Checks GitHub for new versions and offers to install them
+- **Automatic backup before updates** - Creates backup of current installation before applying updates
+- **Rollback capability** - Restore to previous versions if needed
 
 ### Session Management
 - Session-start mandatory flow with user confirmation
@@ -40,6 +42,7 @@ The system ensures that all conversations are preserved across session restarts,
 - Index generation for easy navigation
 - File segmentation for large conversations
 - **Automatic update notifications** - Proactive update checking on startup
+- **Backup and rollback system** - Safety features for update management
 
 ### Integration
 - Works with both OpenClaw and VS Code/Qwen Code interfaces

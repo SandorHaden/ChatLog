@@ -187,8 +187,39 @@ ChatLog now includes automatic version checking and update capabilities:
 - **Update Notifications**: Prompts user when newer versions are available
 - **One-Click Updates**: Offers to download and install updates automatically
 - **Background Checking**: Non-intrusive version checks that don't interrupt workflow
+- **Automatic Backup**: Creates backup of current installation before updates
+- **Rollback Capability**: Restore to previous versions if needed
+- **External Recovery**: Standalone rollback utility for broken installations
 
 To manually check for updates, run `UPDATE_CHECK.bat` from the ChatLog installation directory.
+
+## Backup and Rollback System
+
+ChatLog includes a comprehensive backup and rollback system to ensure safety during updates:
+
+### Backup Features
+- **Automatic Backups**: Created before every update
+- **Timestamped Backups**: Each backup includes date and time
+- **Complete Installation**: All files and configurations are backed up
+- **Dedicated Storage**: Backups stored in `%USERPROFILE%\.agents\skills\chatlog_backup\`
+
+### Rollback Features
+- **Internal Rollback**: Accessible from within ChatLog via `rollback_chatlog.bat`
+- **External Rollback**: Standalone `external_rollback.bat` can recover even if ChatLog is broken
+- **Multiple Backup Versions**: Choose which backup to restore
+- **Backup Information**: Each backup includes version and timestamp information
+
+### Usage
+1. **Automatic Backup**: Happens automatically before updates
+2. **Manual Backup**: Run `backup_chatlog.bat` anytime to create a backup
+3. **Rollback**: Run `rollback_chatlog.bat` to restore from a previous backup
+4. **External Recovery**: Run `external_rollback.bat` if ChatLog is broken
+
+### Safety Notes
+- Backups are stored separately from the main installation
+- Multiple backup versions are retained
+- Rollback preserves all conversation logs and project data
+- External rollback can be run even if ChatLog skill is corrupted
 
 ## Author & License
 

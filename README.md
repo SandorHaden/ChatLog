@@ -12,6 +12,9 @@ ChatLog is a multi-file conversation management system for Qwen Code that automa
 - Standardized file naming convention
 - Easy retrieval and search of past conversations
 - **Automatic version checking and updates** - Checks GitHub for new versions on startup and offers to install updates automatically
+- **Automatic backup before updates** - Creates backup of current installation before applying updates
+- **Rollback capability** - Restore to previous versions if needed
+- **External rollback utility** - Recover even if ChatLog is broken
 
 ## Installation
 
@@ -68,6 +71,9 @@ After making changes to ChatLog, run `DEVELOPMENT.bat` to:
 - `DEVELOPMENT.bat` - Development workflow script
 - `UPDATE_CHECK.bat` - Manual update checking script
 - `check_version.ps1` - PowerShell script for version checking (used by the skill)
+- `backup_chatlog.bat` - Creates backup of current ChatLog installation
+- `rollback_chatlog.bat` - Rolls back to a previous backup (internal use)
+- `external_rollback.bat` - Rolls back to a previous backup (external use)
 
 ## File Structure
 
