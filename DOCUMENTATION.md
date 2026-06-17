@@ -31,6 +31,7 @@ The system ensures that all conversations are preserved across session restarts,
 - 6 trigger points for automatic session saving
 - Standardized file naming convention with timestamps
 - Easy retrieval and search of past conversations
+- **Automatic version checking and updates** - Checks GitHub for new versions and offers to install them
 
 ### Session Management
 - Session-start mandatory flow with user confirmation
@@ -38,6 +39,7 @@ The system ensures that all conversations are preserved across session restarts,
 - Automatic summary generation for MEMORY.md
 - Index generation for easy navigation
 - File segmentation for large conversations
+- **Automatic update notifications** - Proactive update checking on startup
 
 ### Integration
 - Works with both OpenClaw and VS Code/Qwen Code interfaces

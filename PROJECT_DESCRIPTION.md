@@ -34,6 +34,7 @@ ChatLog/
 - 6 trigger points for automatic session saving
 - Standardized file naming convention with timestamps
 - Easy retrieval and search of past conversations
+- Automatic version checking and updates
 
 ### Session Management
 - Session-start mandatory flow with user confirmation
@@ -41,6 +42,7 @@ ChatLog/
 - Automatic summary generation for MEMORY.md
 - Index generation for easy navigation
 - File segmentation for large conversations
+- **Automatic update notifications** - Checks for new versions on startup
 
 ### Integration
 - Works with both OpenClaw and VS Code/Qwen Code interfaces

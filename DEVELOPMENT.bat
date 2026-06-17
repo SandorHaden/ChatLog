@@ -60,6 +60,12 @@ copy "%SOURCE_DIR%docs\ChatLog-Convention.md" "%DEST_DIR%\docs" >nul
 echo Copying ChatLog-Splash.txt...
 copy "%SOURCE_DIR%assets\ChatLog-Splash.txt" "%DEST_DIR%\assets" >nul
 
+echo Copying VERSION.txt...
+copy "%SOURCE_DIR%assets\VERSION.txt" "%DEST_DIR%\assets" >nul
+
+echo Copying check_version.ps1...
+copy "%SOURCE_DIR%check_version.ps1" "%DEST_DIR%" >nul
+
 echo.
 echo ChatLog updated on system successfully!
 echo.
@@ -94,6 +100,12 @@ copy "%SOURCE_DIR%docs\ChatLog-Convention.md" "%DEST_DIR%\docs" >nul
 
 echo Copying ChatLog-Splash.txt...
 copy "%SOURCE_DIR%assets\ChatLog-Splash.txt" "%DEST_DIR%\assets" >nul
+
+echo Copying VERSION.txt...
+copy "%SOURCE_DIR%assets\VERSION.txt" "%DEST_DIR%\assets" >nul
+
+echo Copying check_version.ps1...
+copy "%SOURCE_DIR%check_version.ps1" "%DEST_DIR%" >nul
 
 echo.
 echo All operations completed successfully!

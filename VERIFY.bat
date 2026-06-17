@@ -43,6 +43,20 @@ if exist "%CHATLOG_DIR%\assets\ChatLog-Splash.txt" (
     set /a ERRORS+=1
 )
 
+if exist "%CHATLOG_DIR%\assets\VERSION.txt" (
+    echo [OK] assets\VERSION.txt found
+) else (
+    echo [ERROR] assets\VERSION.txt not found
+    set /a ERRORS+=1
+)
+
+if exist "%CHATLOG_DIR%\check_version.ps1" (
+    echo [OK] check_version.ps1 found
+) else (
+    echo [ERROR] check_version.ps1 not found
+    set /a ERRORS+=1
+)
+
 echo.
 if %ERRORS% == 0 (
     echo Verification successful! ChatLog is properly installed.

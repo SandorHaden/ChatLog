@@ -7,10 +7,12 @@ license: "MIT (free) / Commercial (paid)"
 required_files:
   - "docs/ChatLog-Convention.md"
   - "assets/ChatLog-Splash.txt"
+  - "assets/VERSION.txt"
 optional_files:
   - "docs/SECURITY-MODEL.md"
 installation_notes: "This skill requires additional files. Use INSTALL.bat for automatic setup or manually copy all files from the distribution package to %USERPROFILE%\\.agents\\skills\\chatlog\\"
 compatibility: "Qwen Code v1.0+"
+update_check: "powershell -ExecutionPolicy Bypass -File %SKILL_DIR%\\check_version.ps1"
 ---
 
 # ChatLog — Every Conversation, Forever Logged
@@ -175,7 +177,18 @@ The `c:\Users\Háden Sándor\source\repos\Air Stripper Modeller - VS Studio Code
 - **v1.1.0** (2026-06-12 17h48) — Splash art MINDIG megjelenik session-elején (új + folytatás) — Sanyi kérésére
 - **v1.0.0** (2026-06-12) — renamed from `conversation-convention` to `ChatLog`
 - Source: Based on the original conversation-convention skill created with Sanyi on 2026-06-11
-- GitHub: https://github.com/SandorHaden/Air-Stripper-Modeller---VS-Studio-Code/releases/tag/v0.10.3-conv-resume
+- GitHub: https://github.com/SandorHaden/ChatLog
+
+## Automatic Update Feature
+
+ChatLog now includes automatic version checking and update capabilities:
+
+- **Version Checking**: Automatically checks GitHub for new versions on startup
+- **Update Notifications**: Prompts user when newer versions are available
+- **One-Click Updates**: Offers to download and install updates automatically
+- **Background Checking**: Non-intrusive version checks that don't interrupt workflow
+
+To manually check for updates, run `UPDATE_CHECK.bat` from the ChatLog installation directory.
 
 ## Author & License
 

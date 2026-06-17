@@ -63,6 +63,12 @@ if not exist "%DEST_DIR%\assets" (
 echo Copying ChatLog-Splash.txt...
 copy "%SOURCE_DIR%assets\ChatLog-Splash.txt" "%DEST_DIR%\assets" >nul
 
+echo Copying VERSION.txt...
+copy "%SOURCE_DIR%assets\VERSION.txt" "%DEST_DIR%\assets" >nul
+
+echo Copying check_version.ps1...
+copy "%SOURCE_DIR%check_version.ps1" "%DEST_DIR%" >nul
+
 echo.
 echo Installation complete!
 echo.
