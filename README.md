@@ -1,0 +1,69 @@
+# ChatLog - Conversation Management System
+
+ChatLog is a conversation management system for Qwen Code that automatically saves and organizes your AI-assisted coding sessions. Every conversation is logged to `{project}/docs/conversations/` in a deterministic, human-readable, searchable format.
+
+## Features
+
+- Automatic conversation logging with splash art display
+- Project-level isolation of conversation histories
+- 6 trigger points for session saving
+- Standardized file naming convention
+- Easy retrieval and search of past conversations
+
+## Installation
+
+### Automated Installation (Recommended)
+
+1. Clone this repository or download the latest release
+2. Run `INSTALL.bat` as administrator
+3. Follow the prompts to complete installation
+
+### Manual Installation
+
+1. Clone this repository or download the latest release
+2. Place the `chatlog` folder in your Qwen Code skills directory:
+   `C:\Users\Háden Sándor\.agents\skills\chatlog\`
+3. For each project where you want to use ChatLog:
+   - Create a `docs/conversations/` directory in your project root
+   - Add the ChatLog configuration to your project's `MEMORY.md` file
+
+## Usage
+
+Once installed, ChatLog will automatically prompt you at the beginning of each session to:
+1. Apply the conversation convention
+2. Continue with the active project
+3. Load previous session context if desired
+
+Conversations are saved automatically when any of the 6 triggers occur:
+1. Explicit "VÉGE" command
+2. Computer shutdown/sleep
+3. OpenClaw closes
+4. New session starts
+5. Unusual silence (30+ minutes)
+6. Crash/freeze
+
+## Scripts
+
+- `INSTALL.bat` - Automated installation script
+- `VERIFY.bat` - Verification script to check installation
+- `UNINSTALL.bat` - Uninstallation script
+
+## File Structure
+
+```
+{project}/
+└── docs/
+    └── conversations/
+        ├── index.md
+        ├── meta/
+        │   └── ChatLog-Convention.md
+        └── from-{start}-to-{end}-{topic}.md
+```
+
+## Version
+
+v1.0.0 - Initial release
+
+## License
+
+MIT (free) / Commercial (paid)
