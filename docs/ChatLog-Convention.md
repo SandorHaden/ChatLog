@@ -16,41 +16,51 @@
 
 A mappa **nem rejtett** (nincs pont prefix, nincs `_` prefix).
 
-## Fájlnév-formátum
+## Fájlnév-formátum (FRISSÍTVE: 2026-06-17)
 
+### Munkafolyamat alatt (üzenetenkénti append):
 ```
-from-{kezdés-ÉÉÉÉ-HH-NN-HHhMMm}-to-{befejezés-ÉÉÉÉ-HH-NN-HHhMMm}-{téma-slug}.md
+from-{kezdés-ÉÉÉÉ-HH-NN-HHhMMm}-to-{befejezés-ÉÉÉÉ-HH-NN-HHhMMm}.md
 ```
+**Slug NÉLKÜL!**
 
 - **`from` a kezdő időpont ELÉ kerül**, NEM mögé.
 - **`to` a befejezés időpont ELÉ kerül**, NEM mögé.
-- A teljes minta tehát: `from-START-to-END-tema.md` (egyetlen kötőjeles lánc).
 - **Óra és perc két számjegyű, nullával feltöltve** (pl. `08h15m`, nem `8h15m`).
-- **A téma-slug max. 5 szó, kötőjellel elválasztva, ASCII-only (ékezet nélkül).**
 - **Időzóna NINCS a fájlnévben** — csak a metaadat-fejlécben.
 - Mindig **helyi idő** (Europe/Budapest, alapértelmezetten CET, nyáron CEST).
 
-Példa:
-
+Munkafolyamat alatti példa:
 ```
-from-2026-06-10-04h23m-to-2026-06-10-18h24m-air-stripper-9-fazis.md
-from-2026-06-11-08h15m-to-2026-06-11-10h28m-munkamenet-konvencio.md
-from-2026-06-12-02h00m-to-2026-06-12-02h45m-ejszakai-kerdes.md
-```
-
-## Darabolás
-
-- **Ideális méret:** 20-30 KB.
-- **Maximum:** 50 KB.
-- Ha nagyobb, `_r1`, `_r2`, ... toldalék a fájlnév végén:
-
-```
-from-2026-06-10-04h23m-to-2026-06-10-18h24m-air-stripper-9-fazis_r1.md
-from-2026-06-10-04h23m-to-2026-06-10-18h24m-air-stripper-9-fazis_r2.md
+from-2026-06-17-10h00m-to-2026-06-17-14h15m.md
+from-2026-06-17-10h00m-to-2026-06-17-14h30m.md  (END frissült)
+from-2026-06-17-10h00m-to-2026-06-17-15h45m.md  (END frissült ismét)
 ```
 
-A szegmensek **időrendben** követik egymást; a téma-határoknál (ahol új téma
-indul) lehet vágni.
+### 50 KB elérésekor:
+Az aktuális fájlhoz hozzáadódik a topic-slug:
+```
+from-2026-06-17-10h00m-to-2026-06-17-15h45m-chatlog-integracios-munka.md
+```
+
+### Új szegmens (50 KB után):
+Az új fájl az előző END időpontból indul (szuffix NÉLKÜL):
+```
+from-2026-06-17-15h45m-to-2026-06-17-16h00m.md
+```
+Az END időpont továbbra is frissül append-nél.
+
+### Munkamenet lezárásakor:
+Az utolsó fájlhoz hozzáadódik a topic-slug (ha még nincs ott):
+```
+from-2026-06-17-15h45m-to-2026-06-17-22h30m-chatlog-integracios-munka.md
+```
+
+### Szabályok:
+- **END frissítés:** Minden üzenet append-nél az END időpont aktualizálódik **fájlátnevezéssel**
+- **Slug hozzáadása:** Csak 50 KB elérésekor vagy lezáráskor
+- **A téma-slug** max. 4 szó, max. 20 karakter, kötőjellel elválasztva, ASCII-only (ékezet nélkül)
+- **Szegmentálás:** Nincsenek `_r1`, `_r2` toldalékok — helyette időalapú folyamatos kapcsolódás
 
 ## Fájl belső struktúrája
 
@@ -78,12 +88,27 @@ indul) lehet vágni.
 - {következő munkamenet fájlneve}
 ```
 
-## Mikor készül új fájl?
+## Mikor készül új fájl? (FRISSÍTVE: 2026-06-17)
 
-- Minden **új beszélgetés-munkamenet** elején (vagy végén) új fájl.
-- Ha a téma gyökeresen megváltozik (más ügy, más projekt), új munkamenet
-  indul, és az új fájlban folytatódik.
-- Ha a fájl mérete átlépi az 50 KB-ot, szegmensekre bontjuk (`_r1`, `_r2`).
+- **Minden új beszélgetés-munkamenet** elején új fájl jön létre (slug NÉLKÜL).
+- Ha a téma gyökeresen megváltozik (más ügy, más projekt), új munkamenet indul, és az új fájlban folytatódik.
+- **50 KB-os szegmentálás:** Ha az aktuális fájl elérte a 50 KB-ot:
+  1. Az aktuális fájlhoz hozzáadódik a `-{topic-slug}` és lezárásra kerül
+  2. Új szegmens jön létre: `from-{előző END}-to-{új END}.md` (slug NÉLKÜL)
+  3. Az üzenetenként append folytatódik az új szegmensben
+  4. Az új szegmens END-je is frissül append-nél
+
+## Üzenetenként append logika (FRISSÍTVE: 2026-06-17)
+
+1. **Első üzenet:** Fájl létrehozása: `from-{START}-to-{START}.md`
+2. **Minden új üzenet append:** 
+   - Üzenet hozzáfűzése az aktuális fájlhoz
+   - END időpont aktualizálása fájlátnevezéssel: `from-{START}-to-{NEW END}.md`
+3. **50 KB meghaladása:** 
+   - Az aktuális fájlnév módosítása slug hozzáadásával
+   - Új szegmens indítása slug NÉLKÜL
+4. **Munkamenet lezárása:** 
+   - Az utolsó fájlnév módosítása slug hozzáadásával (ha még nincs ott)
 
 ## Session-end handler (mentési szabály)
 

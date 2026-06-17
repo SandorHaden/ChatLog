@@ -15,7 +15,7 @@
  ║                                                                  ░░░░░░        ║
  ║                                                                                ║
  ║   Made with care by Sandor Haden                      ://github.com            ║
- ║                                                         v1.0.0 | 2026          ║
+ ║                                                         v1.2.0 | 2026          ║
  ║================================================================================║
  ║   The Chat-Saving Skill                                                        ║
  ║   Every conversation, forever logged.                                          ║
@@ -26,6 +26,6 @@
  ║   >  Format:                from-...-to-...-{topic}.md                         ║
  ║   >  License:               MIT (free) / Commercial (paid)                     ║
  ║   >  Author:                Sandor Haden                                       ║
- ║   >  Version:               v1.0.0 - 2026-06-11                                ║
+ ║   >  Version:               v1.2.0 - 2026-06-17                                ║
  ║                                                                                ║
  ╚════════════════════════════════════════════════════════════════════════════════╝
