@@ -8,22 +8,22 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Create Release
-        uses: actions/create-release@v1.1.4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: ncipollo/release-action@v1
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
+          tag: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
           body: |
-            ## ChatLog Release ${{ github.ref }}
+            ## ChatLog Release ${{ github.ref_name }}
 
             Automated release of ChatLog - Conversation Management System.
 
             For installation instructions, see [INSTALL.bat](INSTALL.bat).
+          draft: false
+          prerelease: false
