@@ -11,8 +11,8 @@ REM Get current version
 if exist "%~dp0assets\VERSION.txt" (
     set /p CURRENT_VERSION=<"%~dp0assets\VERSION.txt"
 ) else (
-    set CURRENT_VERSION=1.0.0
-    echo Current version file not found, assuming version 1.0.0
+    set CURRENT_VERSION=1.2.0
+    echo Current version file not found, assuming version 1.2.0
 )
 
 echo Current version: %CURRENT_VERSION%

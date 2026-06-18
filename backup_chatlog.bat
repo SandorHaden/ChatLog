@@ -41,7 +41,7 @@ if exist "%CHATLOG_DIR%" (
         if exist "%CHATLOG_DIR%\assets\VERSION.txt" (
             type "%CHATLOG_DIR%\assets\VERSION.txt" >> "%BACKUP_FOLDER%\backup_info.txt"
         ) else (
-            echo 1.0.0 >> "%BACKUP_FOLDER%\backup_info.txt"
+            echo 1.2.0 >> "%BACKUP_FOLDER%\backup_info.txt"
         )
         
         echo Backup completed successfully!

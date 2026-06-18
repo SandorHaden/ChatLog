@@ -3,7 +3,7 @@
 
 try {
     # Get current version
-    $currentVersion = "1.0.0"
+    $currentVersion = "1.2.0"
     $versionFile = Join-Path $PSScriptRoot "assets\VERSION.txt"
     if (Test-Path $versionFile) {
         $currentVersion = Get-Content $versionFile -Raw | ForEach-Object { $_.Trim() }
