@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Create Release
-        uses: actions/create-release@v1
+        uses: actions/create-release@v1.1.4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -23,7 +23,7 @@ jobs:
           prerelease: false
           body: |
             ## ChatLog Release ${{ github.ref }}
-            
+
             Automated release of ChatLog - Conversation Management System.
-            
+
             For installation instructions, see [INSTALL.bat](INSTALL.bat).
